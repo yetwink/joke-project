@@ -5,30 +5,52 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <div class="container">
+    <main>
+      <div class="container">
+        <div class="shadow">
 
-        <div class="joke">
-            <div class="joke__wrapper">
-                <h1 class="joke__title">GAY?</h1>
+          <header class="header">
+            <img src="/vite.svg" alt="" class="header__logo">
+          </header>
 
-                <div class="joke__btns">
-                    <button class="joke__btn yes">yes</button>
-                    <button class="joke__btn no">no</button>
+          <div class="swiper">
+            <img src="/vite.svg" alt="" class="logo">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div class="swiper-slide__wrapper">
+
+                  <img src="./src/floorplan-img2D-1.jpg" alt="">
                 </div>
+              
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide__wrapper">
 
+                  <img src="./src/floorplan-img2D-2.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide__wrapper">
+
+                  <img src="./src/floorplan-img2D-3.jpg" alt="">
+                </div>
+              </div>
             </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+
         </div>
-
-
-        <div class="joke__active">
-            HAAHHAHAAHHAHAHAHAHHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAH
-        </div>
-
-
-    </div>
+      </div>
+    </main>
 
 
 
@@ -36,7 +58,7 @@
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

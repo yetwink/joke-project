@@ -1,26 +1,24 @@
-// import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-const noBtn = document.querySelector('.joke__btn.no');
-const yesBtn = document.querySelector('.joke__btn.yes');
 
-console.log(noBtn);
 
-noBtn.addEventListener("mouseover", function(event) {
 
-  const randomX = Math.floor(Math.random() * (window.innerWidth - noBtn.offsetWidth));
-  const randomY = Math.floor(Math.random() * (window.innerHeight - noBtn.offsetHeight));
 
-  // Применяем новые позиции к элементу
-  noBtn.style.position = "absolute"; // Делаем элемент абсолютным, чтобы можно было изменить его координаты
-  noBtn.style.left = `${randomX}px`;
-  noBtn.style.top = `${randomY}px`;
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  autoplay: {
+      delay: 5000, 
+      disableOnInteraction: true,
+  },
+  speed: 500,
+  pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+  },
 });
 
-yesBtn.addEventListener('click', () => {
-  document.querySelector('.joke').classList.add('unactive')
-  document.querySelector('.joke__active').classList.add('active')
-})
 
